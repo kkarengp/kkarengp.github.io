@@ -1,0 +1,262 @@
+body{
+    display: grid;
+    width: 100vw;
+    height:100vh;
+    grid-template-columns: 0.5fr 2fr 2fr;
+    grid-template-rows: 9% 18% 50% 55% 40% 20%;
+    grid-template-areas: 
+    "topnav topnav topnav" 
+    "header header header" 
+    "photos photos photos" 
+    "aside services services" 
+    "promo promo1 promo2"
+    "footer footer footer";
+}
+h1{
+    padding-top: 1rem;
+    font-weight: 500;
+    font-size: 3rem;
+    font-family: 'Oswald', sans-serif;
+    color: #131E3D;
+}
+.fa-tools{
+    margin-right: 10px;
+}
+.title:hover{
+    text-decoration: none;
+}
+h2{
+    padding-top: 2rem;
+    font-weight: normal;
+    font-family: 'Oswald', sans-serif;
+}
+h3{
+    padding-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-right: 5%;
+}
+
+p{
+    font-size: larger;
+    font-family: 'Open Sans', sans-serif; 
+}
+/* INDEX.HTML*/
+.navbar{
+    display:none;
+}
+.topnav{
+    font-family: 'Open Sans', sans-serif;
+    grid-area: topnav;
+    background-color: #94B0DA;
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 9%;
+    z-index: 1;
+}
+.fa-map-marker-alt{
+    margin-right: 6px;
+}
+.fa-phone{
+    margin-right: 6px;
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    background:#DCEDFF;
+    color: white;
+    grid-area: header;
+    padding: 1rem;
+    justify-content: space-between;
+}
+#navbar{
+    display: flex;
+    grid-area: navbar;
+}
+.items{
+    display: flex;
+}
+.navitem{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    color:#131E3D;
+    text-align: center;
+    padding-top: 3rem;
+    padding-right: 2rem;
+    margin-right:2rem;
+}
+.navitem:hover{
+    font-weight: bold;
+    color:white;
+    text-decoration: none;
+}
+.photos{
+    grid-area: photos;
+   
+}
+aside{
+    padding-top: 2rem;
+    grid-area: aside;
+    text-align: center;
+    background-color: white;
+    color:#131E3D
+}
+.services{ 
+    margin-top: 5rem;
+    grid-area: services;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+}
+.card-img-top{
+    height: 200px;
+    width:200px;
+}
+.card-body{
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #35403E;
+    color:white;
+}
+.card-body:hover{
+    background-color: #94B0DA;
+    color:white;
+}
+.promo{
+    grid-area: promo;
+    text-align: center;
+    background-color:#131E3D;
+    color:white;
+}
+.promo1{
+    font-family: 'Open Sans', sans-serif;
+    grid-area: promo1;
+    border-top: 2px solid #DCEDFF;
+    padding: 1rem;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+.promo2{
+    padding: 1rem;
+    margin-right: 20%;
+    margin-left: 20%;
+    grid-area: promo2;
+    border-top: 2px solid #DCEDFF;
+}
+footer{
+    font-size: small;
+    padding: 3rem;
+    display: flex;
+    grid-area: footer;
+    background-color: #DCEDFF;
+}
+.instagram{
+    margin-left: 20px;
+    width: 40px;
+    height:40px;
+}
+.facebook{
+    margin-left: 20px;
+    width:45px;
+    height:40px;
+}
+
+@media screen and (max-width: 780px) {
+    body{
+        display: grid;
+        width: 100vw;
+        height:100vh;
+        grid-template-columns: 100% ;
+        grid-template-rows: 10% 10% 10% 50% 10% 40% 40% 10%;
+        grid-template-areas: 
+        "navbar"
+        "topnav"
+        "aside"
+        "services"
+        "promo"
+        "promo1"
+        "promo2"
+        "footer"
+    }
+    h3{
+        font-size: 0.9rem;
+        padding-left: 10px;
+    }
+    .topnav{
+        position: absolute;
+        margin-top: 10%;
+        background-color: white;
+        color: #131E3D;
+        z-index: 0;
+    }
+    .navbar{
+        position: absolute !important;
+        grid-area: navbar;
+        display: inline-block;
+        background-color: #131E3D !important;
+        position: absolute;
+        width: 100%;
+        
+    }
+    .navbar-brand{
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.5rem;
+        margin-left: 10%;
+        color:white !important;
+
+    }
+    .nav-item .nav-link{
+        color:white !important;
+        font-family: 'Open Sans', sans-serif;
+        padding-left: 5px;
+        background-color: #94B0DA;
+    }
+    .navbar-toggler-icon{
+        background-color: #94B0DA;
+    }
+   
+    aside{
+        margin-top: -5rem;
+        grid-area: aside;
+    }
+    aside h2{
+        background-color: #DCEDFF;
+        padding: 1rem;
+    }
+   .services{
+      display: flex;
+      flex-direction: row;
+      width: 40%;
+
+   }
+    .promo{
+        background-color: #DCEDFF;
+        color: #131E3D;
+    }
+    .promo h2{
+        background-color: #DCEDFF;
+        padding: 1rem;
+    }
+    .promo1{
+        border:none;
+    }
+  
+    footer{
+        background-color: #131E3D;
+        color:white;
+    }
+    .photos{
+        display: none;
+    }
+    header{
+        display: none;
+    }
+}
