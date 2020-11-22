@@ -1,14 +1,24 @@
 body{
+    box-sizing: border-box;
     display: grid;
     width: 100vw;
     height:100vh;
     grid-template-columns: 100%;
-    grid-template-rows: 9% 18% 90% 20%;
+    grid-template-rows: 9% 18% 120% 20%;
     grid-template-areas: 
     "topnav" 
     "header" 
     "photos" 
     "footer";
+}
+aside{
+    display: none;
+}
+.info{
+    display: none;
+}
+nav{
+    display:none;
 }
 h1{
     padding-top: 1rem;
@@ -95,15 +105,16 @@ header{
 }
 .photos{
     padding: 1rem;
+    justify-content: center;
     grid-area: photos;
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between
 }
 .pic{
+    padding: 2%;
     display: flex;
-    height: 250px;
-    width: 250px;
+    height: 40vh;
+    width: 20vw;
 }
 
 
@@ -124,4 +135,83 @@ footer{
     margin-left: 20px;
     width:45px;
     height:40px;
+}
+
+@media screen and (max-width: 780px) {
+    body{
+    display: grid;
+    width: 100vw;
+    height:100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 9% 8% 9% 130% 20%;
+    grid-template-areas: 
+    "navbar"
+    "info"  
+    "aside"
+    "photos"
+    "footer";
+    }
+    header{
+        display:none;
+    }
+    .navbar{
+        position: absolute !important;
+        grid-area: navbar;
+        display: block;
+        background-color: #131E3D !important;
+        position: absolute;
+        width: 100%;
+    }
+    .navbar-brand{
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.5rem;
+        margin-left: 10%;
+        color:white !important;
+
+    }
+    .nav-item .nav-link{
+        color:white !important;
+        font-family: 'Open Sans', sans-serif;
+        padding-left: 5px;
+        background-color: #94B0DA;
+    }
+    .navbar-toggler-icon{
+        background-color: #94B0DA;
+    }
+    .topnav{
+        display: none;
+
+    }
+    .info{
+        grid-area: info;
+        display: flex;
+        justify-content: center;
+    }
+    h3{
+        font-size: 2vh;
+    }
+    aside{
+        grid-area: aside;
+        display: flex;
+        background-color: #DCEDFF;
+        color: #131E3D;
+        justify-content: center;
+    }
+    h2{
+        padding: 1rem;
+    }
+  
+    .photos{
+        display: flex;
+        grid-area: photos;
+    }
+    .pic{
+        width: 40vw;
+        height: 25vh;
+    }
+    footer{
+        grid-area: footer;
+        background-color: #131E3D;
+        color:white;
+    }
 }

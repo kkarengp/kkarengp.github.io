@@ -115,6 +115,7 @@ aside{
 }
 
 p{
+    font-size: 1.5vw;
     padding: 2rem;
 }
 .fa-star{
@@ -146,10 +147,11 @@ footer{
     width: 100vw;
     height:100vh;
     grid-template-columns: 100%;
-    grid-template-rows: 20% 18% 40% 40% 20%;
+    grid-template-rows: 9% 6% 8% 40% 20%;
     grid-template-areas: 
     "navbar"
-    "topnav"
+    "info"
+    "aside"
     "reviews1"
     "reviews2"
     "footer"
@@ -187,12 +189,36 @@ footer{
     }
     .topnav{
         display:none;
-        grid-area: topnav;
+    }
+    .info{
+        display: flex;
+        grid-area: info;
+        justify-content: center;
+    }
+    h2{
+        font-size: 7vw;
+    }
+    h3{
+        font-size: 2vh;
+    }
+    p{
+        font-size: 3vw;
+        padding: 1rem;
+    }
+    aside{
+        grid-area: aside;
+        background-color: #DCEDFF;
+        color: #131E3D;
     }
     .reviews1{
         grid-area: reviews1;
     }
     .reviews2{
         grid-area: reviews2;
+    }
+    footer{
+        grid-area: footer;
+        background-color: #131E3D;
+        color:white;
     }
 }
