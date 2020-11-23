@@ -122,7 +122,12 @@ aside{
 .reviews1{
     grid-area: reviews1;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+.reviews2{
+    grid-area: reviews2;
+    display: flex;
+    justify-content: space-between;
 }
 
 
