@@ -41,6 +41,7 @@ h3{
 p{
     font-size: larger;
     font-family: 'Open Sans', sans-serif; 
+    
 }
 
 .fa-tools{
@@ -139,7 +140,7 @@ aside{
     background-color: #35403E;
     text-align: center;
     color:white;
-    height: 50vh;
+    height: 8vh;
     width: 14vw;
     padding: 5%;
 }
@@ -271,6 +272,7 @@ footer{
         display: block;
         width: 40vw ;
         height: 30vh;
+        z-index: 1;
     }
     .container{
         justify-content: center;
@@ -279,10 +281,11 @@ footer{
         background-color: #35403E;
         text-align: center;
         color:white;
-        height: 50vh;
+        height: 9vh;
         width: 40vw;
         padding: 5%;
     }
+
    
     aside{
         margin-top: -1rem;
