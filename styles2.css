@@ -197,6 +197,7 @@ footer{
     }
     form{
         grid-area: form;
+        z-index: -1;
     }
     footer{
         grid-area: footer;
