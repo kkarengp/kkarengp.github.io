@@ -10,27 +10,17 @@ body{
     "form"
     "footer";
 }
-aside{
-    display: none;
+
+.title:hover{
+    text-decoration: none;
 }
-nav{
-    display:none;
-}
-.info{
-    display: none;
-}
+
 h1{
     padding-top: 1rem;
     font-weight: 500;
     font-size: 4vw;
     font-family: 'Oswald', sans-serif;
     color: #131E3D;
-}
-.fa-tools{
-    margin-right: 10px;
-}
-.title:hover{
-    text-decoration: none;
 }
 h2{
     font-weight: normal;
@@ -49,10 +39,27 @@ p{
     font-family: 'Open Sans', sans-serif; 
     margin-left: 2rem;
 }
-/* INDEX.HTML*/
+
+aside{
+    display: none;
+}
+.info{
+    display: none;
+}
 .navbar{
     display:none;
 }
+
+.fa-tools{
+    margin-right: 10px;
+}
+.fa-map-marker-alt{
+    margin-right: 6px;
+}
+.fa-phone{
+    margin-right: 6px;
+}
+
 .topnav{
     font-family: 'Open Sans', sans-serif;
     grid-area: topnav;
@@ -66,12 +73,7 @@ p{
     height: 9%;
     z-index: 1;
 }
-.fa-map-marker-alt{
-    margin-right: 6px;
-}
-.fa-phone{
-    margin-right: 6px;
-}
+
 
 header{
     grid-area: header;
@@ -114,7 +116,6 @@ header{
    
 }
 
-
 footer{
     font-size: small;
     padding: 3rem;
@@ -150,6 +151,15 @@ footer{
     header{
         display:none;
     }
+    .topnav{
+        display: none;
+    }
+
+    h3{
+        font-size: 2vh;
+        padding: 0;
+    }
+
     .navbar{
         position: absolute !important;
         grid-area: navbar;
@@ -174,10 +184,7 @@ footer{
     .navbar-toggler-icon{
         background-color: #94B0DA;
     }
-    .topnav{
-        display: none;
 
-    }
     .info{
         grid-area: info;
         display: flex;
@@ -191,14 +198,12 @@ footer{
         justify-content: center;
         padding-top: 15px;
     }
-    h3{
-        font-size: 2vh;
-        padding: 0;
-    }
+
     form{
         grid-area: form;
         z-index: -2;
     }
+
     footer{
         grid-area: footer;
         background-color: #131E3D;

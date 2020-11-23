@@ -22,12 +22,6 @@ h1{
     font-family: 'Oswald', sans-serif;
     color: #131E3D;
 }
-.fa-tools{
-    margin-right: 10px;
-}
-.title:hover{
-    text-decoration: none;
-}
 h2{
     padding-top: 2%;
     font-weight: normal;
@@ -39,12 +33,34 @@ h3{
     font-weight: 500;
     margin-right: 5%;
 }
-
 p{
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 1.5vw;
+    padding: 2rem;
+}
+.footertext{
     font-size: larger;
     font-family: 'Open Sans', sans-serif; 
+    padding: 1rem;
 }
-/* INDEX.HTML*/
+
+
+.fa-tools{
+    margin-right: 10px;
+}
+.fa-map-marker-alt{
+    margin-right: 6px;
+}
+.fa-phone{
+    margin-right: 6px;
+}
+.fa-star{
+    padding: 0.3rem;
+}
+.title:hover{
+    text-decoration: none;
+}
+
 .navbar{
     display:none;
 }
@@ -60,12 +76,6 @@ p{
     width: 100%;
     height: 9%;
     z-index: 1;
-}
-.fa-map-marker-alt{
-    margin-right: 6px;
-}
-.fa-phone{
-    margin-right: 6px;
 }
 
 header{
@@ -100,6 +110,7 @@ header{
     color:white;
     text-decoration: none;
 }
+
 aside{
     grid-area: aside;
     background-color: #131E3D;
@@ -113,15 +124,6 @@ aside{
     display: flex;
     justify-content: center;
 }
-
-p{
-    font-size: 1.5vw;
-    padding: 2rem;
-}
-.fa-star{
-    padding: 0.3rem;
-}
-
 
 
 footer{
@@ -141,6 +143,7 @@ footer{
     width:45px;
     height:40px;
 }
+
 @media screen and (max-width: 780px) {
     body{
     display: grid;
@@ -156,9 +159,24 @@ footer{
     "reviews2"
     "footer"
     }
+    .topnav{
+        display:none;
+    }
     header{
         display:none;
     }
+
+    h2{
+        font-size: 5vh;
+    }
+    h3{
+        font-size: 2vh;
+    }
+    p{
+        font-size: 3vw;
+        padding: 1rem;
+    }
+
     .navbar{
         grid-area: navbar;
         display: inline-flex;
@@ -176,7 +194,6 @@ footer{
         font-size: 1.5rem;
         margin-left: 10%;
         color:white !important;
-
     }
     .nav-item .nav-link{
         color:white !important;
@@ -187,35 +204,26 @@ footer{
     .navbar-toggler-icon{
         background-color: #94B0DA;
     }
-    .topnav{
-        display:none;
-    }
+   
     .info{
         display: flex;
         grid-area: info;
         justify-content: center;
     }
-    h2{
-        font-size: 5vh;
-    }
-    h3{
-        font-size: 2vh;
-    }
-    p{
-        font-size: 3vw;
-        padding: 1rem;
-    }
+    
     aside{
         grid-area: aside;
         background-color: #DCEDFF;
         color: #131E3D;
     }
+
     .reviews1{
         grid-area: reviews1;
     }
     .reviews2{
         grid-area: reviews2;
     }
+
     footer{
         grid-area: footer;
         background-color: #131E3D;

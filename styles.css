@@ -7,7 +7,7 @@ body{
     grid-template-areas: 
     "topnav topnav topnav" 
     "header header header" 
-    "photos photos photos" 
+    "carousel carousel carousel" 
     "aside services services" 
     "promo promo1 promo2"
     "footer footer footer";
@@ -15,18 +15,16 @@ body{
 .info{
     display: none;
 }
+.navbar{
+    display:none;
+}
+
 h1{
     padding-top: 1rem;
     font-weight: 500;
     font-size: 4vw;
     font-family: 'Oswald', sans-serif;
     color: #131E3D;
-}
-.fa-tools{
-    margin-right: 10px;
-}
-.title:hover{
-    text-decoration: none;
 }
 h2{
     padding-top: 2rem;
@@ -44,10 +42,20 @@ p{
     font-size: larger;
     font-family: 'Open Sans', sans-serif; 
 }
-/* INDEX.HTML*/
-.navbar{
-    display:none;
+
+.fa-tools{
+    margin-right: 10px;
 }
+.fa-map-marker-alt{
+    margin-right: 6px;
+}
+.fa-phone{
+    margin-right: 6px;
+}
+.title:hover{
+    text-decoration: none;
+}
+
 .topnav{
     font-family: 'Open Sans', sans-serif;
     grid-area: topnav;
@@ -61,12 +69,7 @@ p{
     height: 9%;
     z-index: 1;
 }
-.fa-map-marker-alt{
-    margin-right: 6px;
-}
-.fa-phone{
-    margin-right: 6px;
-}
+
 
 header{
     grid-area: header;
@@ -100,10 +103,11 @@ header{
     color:white;
     text-decoration: none;
 }
-.photos{
-    grid-area: photos;
-   
+
+.carousel{
+    grid-area: carousel;
 }
+
 aside{
     padding-top: 2rem;
     grid-area: aside;
@@ -143,6 +147,7 @@ aside{
     background-color: #94B0DA;
     color:white;
 }
+
 .promo{
     grid-area: promo;
     text-align: center;
@@ -164,6 +169,7 @@ aside{
     grid-area: promo2;
     border-top: 2px solid #DCEDFF;
 }
+
 footer{
     font-size: small;
     padding: 3rem;
@@ -200,9 +206,16 @@ footer{
         "footer"
     }
    
+    header{
+        display: none;
+    }
     .topnav{
         display: none;
     }
+    .carousel{
+        display:none;
+    }
+
     .navbar{
         position: absolute !important;
         grid-area: navbar;
@@ -228,6 +241,7 @@ footer{
     .navbar-toggler-icon{
         background-color: #94B0DA;
     }
+
     .info{
         display: flex;
         grid-area: info;
@@ -240,6 +254,7 @@ footer{
         margin: 5px;
         z-index: 1;
     }
+
     .services{ 
         z-index: -1;
         grid-area: services;
@@ -298,11 +313,5 @@ footer{
     footer{
         background-color: #131E3D;
         color:white;
-    }
-    .photos{
-        display: none;
-    }
-    header{
-        display: none;
     }
 }
